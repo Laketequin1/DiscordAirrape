@@ -15,7 +15,7 @@ DWORD GetVolumeLevelFromDecimal(float volume)
 int main()
 {
     // Specify whether the sound should loop or only play once.
-    bool loopSound = false;
+    bool loopSound = true;
 
     // Set the flags for the PlaySound function.
     DWORD flags = SND_ASYNC | SND_FILENAME;
@@ -25,7 +25,7 @@ int main()
     }
 
     // Play the wav file
-    if (!PlaySound(TEXT("test.wav"), NULL, flags))
+    if (!PlaySound(TEXT("star.wav"), NULL, flags))
     {
         std::cerr << "Failed to play sound." << std::endl;
         return 1;
@@ -34,8 +34,8 @@ int main()
     std::cout << "Playing sound..." << std::endl;
 
     // Gradually increase the volume an amount per time period.
-    float volume = 1.0f;
-    const float volumeIncrease = 0.0f;
+    float volume = 0.0f;
+    const float volumeIncrease = 0.2f;
     const float increaseDuration = 1.0f;
     while (true)
     {
@@ -49,6 +49,5 @@ int main()
         Sleep(static_cast<DWORD>(increaseDuration * 1000.0f));
     }
 
-    system("pause");
     return 0;
 }

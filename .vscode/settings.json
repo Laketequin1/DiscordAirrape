@@ -43,6 +43,13 @@
         "typeinfo": "cpp",
         "ctime": "cpp",
         "map": "cpp",
-        "set": "cpp"
+        "set": "cpp",
+        "chrono": "cpp",
+        "ratio": "cpp",
+        "thread": "cpp",
+        "codecvt": "cpp",
+        "condition_variable": "cpp",
+        "future": "cpp",
+        "mutex": "cpp"
     }
 }
